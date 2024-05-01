@@ -30,4 +30,15 @@ if (startDateYear < 2010 || startDateYear > 2024) {
    process.exit(1);
 }
 
-
+let StartDateMonth = prompt("Employee Start Date Month (1-12): ");
+StartDateMonth = Number(StartDateMonth);
+// Check if it is a valid integer
+if (!Number.isInteger(StartDateMonth)) {
+  console.error('Enter a valid start date month');
+  process.exit(1);
+}
+// Check if the number is in the range
+if (StartDateMonth < 1 || StartDateMonth > 12) {
+   console.error('Enter a start date month within the correct range');
+   process.exit(1);
+}
