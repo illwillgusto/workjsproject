@@ -66,3 +66,7 @@ if (isActive !== "yes" && isActive !== "no") {
   process.exit(1);
 }
 employee.isActive = (isActive === "yes");
+
+//Output Employee JSON
+const json = JSON.stringify(employee, null, 2);
+console.log(`Employee: ${json}`);
